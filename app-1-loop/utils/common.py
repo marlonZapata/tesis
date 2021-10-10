@@ -105,7 +105,7 @@ def create_values_dictionary(wf_df, df_df, counter, mask, weekDate, data_id):
 
 def export_to_excel(path, df_array, sheet_names_list):
     with pd.ExcelWriter(path) as writer:
-        for df, name in df_array, sheet_names_list:
+        for (df, name) in zip(df_array, sheet_names_list):
             df.to_excel(writer, sheet_name=name)
 
 
