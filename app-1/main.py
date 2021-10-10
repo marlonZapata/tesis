@@ -32,7 +32,7 @@ while True:
 """ 
 DATA LECTURE
 """
-"""
+
         # general facts
 gf_df = pd.read_excel(io=filepaths_list[data_id],
                       sheet_name=sheet_names_list[sheet_name_id],
@@ -45,7 +45,6 @@ gf_df = gf_df.values.reshape((1, -1))
 gf_df = pd.DataFrame(gf_df, index=[sheet_names_list[sheet_name_id]], columns=g_f_n)
 gf_df = gf_df.rename_axis('Piscina')
 #  show_data(gf_df)
-"""
 
 # weekly facts
 wf_df = pd.read_excel(io=filepaths_list[data_id],
